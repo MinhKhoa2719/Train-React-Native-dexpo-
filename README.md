@@ -39,13 +39,60 @@ Mở Expo và quét mã QR trong thiết bị đầu cuối hoặc trình duyệ
   
 
 ## Hello World
-Nhìn vào tệp app.json
+Nhìn vào tệp App.js
+Giờ xóa hết trong App.js và thêm code mới vào để có thể hiện ra Hello World
+##### hãy nhớ dòng quan trọng : import Button from ‘react-native’
+Thêm code :
+```jsx
+export default class App extends React.Component {
+   constructor(props){
+     super(props);
+     this.state = {
+     name: 'World!',
+     }
+   }
+   onClick = () => {
+     this.setState({
+     name: 'John!',
+     })
+   };
+   render() {
+   return (
+     <View style={styles.container}>
+       <Text>Hello {this.state.name}</Text>
+       <Button 
+            onPress={() => {this.onClick()}} 
+            title='Click me'
+            color='#4169E1'>
+       </Button>
+     </View>
+   );
+   }
+}
+const styles = StyleSheet.create({
+   container: {
+     flex: 1,
+     backgroundColor: '#fff',
+     alignItems: 'center',
+     justifyContent: 'center',
+   }, 
+   nameText: {
+     fontSize: 50,
+     padding: 15,
+   }
+});
+```
+
+- Trong đoạn mã trên, "Text" sẽ hiển thị tên ở trạng thái. Giá trị ban đầu của "name" là "World!" và nhấn nút "Click me" sẽ gọi hàm "onClick" thay đổi giá trị "name" thành World! .
+
+- Khi nói đến Button, React Native cung cấp các tùy chọn rất hạn chế cho thành phần đó. Thành phần nút hiển thị nút gốc trên nền tảng. Bởi vì điều này, nó không có nhiều style
+- Vì vậy, để thay đổi màu của nút, chuyển màu # 4169E1 thành màu prop.
+- Muốn kiểm soát nhiều hơn về ngoại hình, hãy sử dụng TouchableOpacity thay vì nút.
 
 
-
-
-
-
+Lưu ý:
+nhớ import button
+![image](https://user-images.githubusercontent.com/54676091/120829936-2dd3a000-c588-11eb-9ab8-aea26f7076da.png)
 
 
 
