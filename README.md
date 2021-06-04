@@ -90,8 +90,16 @@ const styles = StyleSheet.create({
 - Muốn kiểm soát nhiều hơn về ngoại hình, hãy sử dụng TouchableOpacity thay vì nút.
 
 
+## Kết Quả
+
+![image](https://user-images.githubusercontent.com/54676091/120830224-7b500d00-c588-11eb-966c-3e1a736e2346.png)
+
+
+
+
 Lưu ý:
 nhớ import button
+
 ![image](https://user-images.githubusercontent.com/54676091/120829936-2dd3a000-c588-11eb-9ab8-aea26f7076da.png)
 
 
